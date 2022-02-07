@@ -1,0 +1,35 @@
+.wrapper{
+    padding: 80px;
+    overflow: hidden; 
+}
+.info{
+    overflow: hidden;
+}
+.field{
+    float: left;
+    width:30%;
+    margin-bottom: 40px;
+}
+.field label{
+    font-size: 20px;
+}
+.detail{
+    float: right;
+    width:70%;
+}
+.detail input{
+    font-size: 20px;
+}
+#btn{
+    padding: 20px;
+    padding-right: 50px;
+    padding-left:50px;
+    font-size: 16px;
+}
+table{
+    width: 80%;
+    margin-top: 30px;
+}
+td{
+    text-align: center;
+}
