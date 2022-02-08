@@ -1,9 +1,11 @@
 const products = [];
-
 function submitProductForm() {
   var arr = getData();
   console.log(arr);
   products.push(arr);
+  displayTable();
+}
+function displayTable() {
   var table = document.getElementById("dispTable");
   var r = table.insertRow(-1);
   var c1 = r.insertCell(0);
@@ -15,15 +17,22 @@ function submitProductForm() {
     c3.innerHTML = "USD " + products[i].productPrice;
   }
 }
-
 function getData() {
   var pid = document.getElementById("pId").value;
   var name = document.getElementById("pName").value;
   var price = document.getElementById("pPrice").value;
-
-  return {
-    productid: pid,
-    productName: name,
-    productPrice: price,
-  };
+  validateProd(pid);
+    return {
+      productid: pid,
+      productName: name,
+      productPrice: price,
+    };
 }
+function validateProd(proId) {
+  console.log(proId);
+  for (let j = 0; j < products.length; j++) {
+    if (proId == products[j].productid) 
+    window.alert('Id already exists');
+    return exit;
+  }
+} 
